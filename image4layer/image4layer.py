@@ -250,7 +250,7 @@ def split_separate_blend(cb, cs):
 
     if cb.mode == cs.mode:
         dst_mode = cb.mode
-        color_pair = zip(cbc, csc)
+        color_pair = list(zip(cbc, csc))
     else:
         dst_mode = cb.mode if len(cbc) >= len(csc) else cs.mode
         if dst_mode in ("RGB", "L"):
